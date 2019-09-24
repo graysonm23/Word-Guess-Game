@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Mansalva&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mansalva";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #25272e;
+  color: white;
+}
+
+header {
+  text-align: center;
+  font-size: 36px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  transition: 0.5s ease 0.5s;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sectionwrapper {
+  margin: 50px auto;
+  border: 3px solid white;
+  width: 700px;
+  border-radius: 4px;
+  position: relative;
+  height: 525px;
+}
+
+.leftside {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border-right: 3px dashed white;
+  transition: 0.5s ease 0.5s;
+}
+
+.rightside {
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border-left: 3px dashed white;
+  text-align: center;
+  transition: 0.5s ease 0.5s;
+}
+
+.keytostart {
+  padding: 50px;
+}
+
+.winsP {
+  padding: 20px;
+}
+
+#wordWrap {
+  padding: 50px;
+  text-align: center;
+}
+
+.guessremainingP {
+  padding: 10px;
+}
+
+.GuessedLetters {
+  padding: 20px;
+}
+
+.guessedlettersdiv {
+  padding: 65px;
+  text-align: center;
+}

@@ -24,13 +24,48 @@ if (chosenWord === words[0]) {
   var img = document.createElement("img");
   var src = document.getElementsByClassName("imgdivclass");
   img.src = "assets/images/lowtide.jpg";
-  img.append(src);
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[1]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/clam.jpg";
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[2]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/coral.jpg";
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[3]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/boat.jpg";
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[4]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/coast.jpg";
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[5]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/hermit.jpg";
+  document.getElementById("imgdivid").appendChild(img);
+} else if (chosenWord === words[6]) {
+  var img = document.createElement("img");
+  var src = document.getElementsByClassName("imgdivclass");
+  img.src = "assets/images/fish.jpg";
+  document.getElementById("imgdivid").appendChild(img);
 }
 
 // creating the function to minus the number of guesses when a letter is pushed to wrongWordArray
 function wrongGuess() {
   guessremainingNum--;
   guessremainingNumSpan.innerHTML = guessremainingNum;
+
+  if (guessremainingNum === 0) {
+    alert("You Lose 😢");
+    location.reload();
+  }
 }
 
 document.addEventListener("keyup", function() {
@@ -40,7 +75,7 @@ document.addEventListener("keyup", function() {
     underScore[chosenWord.indexOf(keyword)] = keyword;
     docUnderScore[0].innerHTML = underScore.join(" ");
     if (underScore.join("") == chosenWord) {
-      alert("you win");
+      alert("You Win 😊");
     }
   } else {
     wrongWordArray.push(keyword);

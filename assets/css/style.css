@@ -31,13 +31,17 @@ header {
   height: 525px;
 }
 
+img {
+  height: 519px;
+  width: 694px;
+}
+
 .leftside {
   top: 0;
   left: 0;
   position: absolute;
   height: 100%;
   width: 50%;
-  border-right: 3px dashed white;
   transition: 0.5s ease 0.5s;
 }
 
@@ -47,7 +51,6 @@ header {
   position: absolute;
   height: 100%;
   width: 50%;
-  border-left: 3px dashed white;
   text-align: center;
   transition: 0.5s ease 0.5s;
 }

@@ -1,16 +1,34 @@
+//array
 var words = ["lowtide", "clam", "coral", "boat", "coast", "hermit", "fish"];
-
-let randomNum = Math.floor(Math.random() * words.length); //random string from array
-let chosenWord = words[randomNum]; //consolidated to variable
+//random string from array
+let randomNum = Math.floor(Math.random() * words.length);
+//consolidated to variable
+let chosenWord = words[randomNum];
+//open array for all the right letters chosen
 let rightWordArray = [];
+// open array for all the letters guessed/wrong
 let wrongWordArray = [];
+// open array for the chosen words which helps generate underscores
 let underScore = [];
 let docUnderScore = document.getElementsByClassName("underline");
 let docGuess = document.getElementsByClassName("guessedlettersdiv");
+let wins = 0;
+let winsCount = document.getElementsByClassName("winscount");
 let guessremainingNum = 15;
 let guessremainingNumSpan = document.getElementById("guessremainingNum");
 
 console.log(chosenWord);
+
+function resetFunc() {
+  guessremainingNum = 15;
+  guessremainingNumSpan.innerHTML = guessremainingNum;
+  rightWordArray = [];
+  wrongWordArray = [];
+  underScore = [];
+  chosenWord * Math.floor(Math.random() * words.length);
+  generateUnderscore;
+  docUnderScore[0].innerHTML = generateUnderscore().join(" ");
+}
 
 function generateUnderscore() {
   for (let i = 0; i < chosenWord.length; i++) {
@@ -19,7 +37,6 @@ function generateUnderscore() {
   return underScore;
 }
 
-//not working properly
 if (chosenWord === words[0]) {
   var img = document.createElement("img");
   var src = document.getElementsByClassName("imgdivclass");
@@ -76,6 +93,9 @@ document.addEventListener("keyup", function() {
     docUnderScore[0].innerHTML = underScore.join(" ");
     if (underScore.join("") == chosenWord) {
       alert("You Win 😊");
+      wins++;
+      winsCount.innerHTML = wins;
+      resetFunc();
     }
   } else {
     wrongWordArray.push(keyword);

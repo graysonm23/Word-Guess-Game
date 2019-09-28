@@ -18,16 +18,16 @@ let guessremainingNum = 15;
 let guessremainingNumSpan = document.getElementById("guessremainingNum");
 
 console.log(chosenWord);
-
+//not working properly unable to reload image and create a new word rather than existing
 function resetFunc() {
   guessremainingNum = 15;
   guessremainingNumSpan.innerHTML = guessremainingNum;
   rightWordArray = [];
   wrongWordArray = [];
   underScore = [];
-  chosenWord * Math.floor(Math.random() * words.length);
-  generateUnderscore;
   docUnderScore[0].innerHTML = generateUnderscore().join(" ");
+  generateUnderscore;
+  document.getElementById("imgdivid").src = "";
 }
 
 function generateUnderscore() {

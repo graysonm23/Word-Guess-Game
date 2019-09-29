@@ -27,7 +27,6 @@ function resetFunc() {
   underScore = [];
   docUnderScore[0].innerHTML = generateUnderscore().join(" ");
   generateUnderscore;
-  document.getElementById("imgdivid").src = "";
 }
 
 function generateUnderscore() {
